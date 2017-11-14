@@ -11,17 +11,17 @@ var express         = require("express"),
     Comment         = require("./models/comment"),
     User            = require("./models/user");
     // seedDB          = require("./seed");
-    
+
 // require routes
 var indexRoutes   = require("./routes/index"),
     postRoutes    = require("./routes/posts"),
     commentRoutes = require("./routes/comments");
     
-    
-// need something like "express-sanitizer"
 
-// mongoose.connect("mongodb://localhost/blog");
-mongoose.connect("mongodb://thinkerelwin:mLab0710@ds259175.mlab.com:59175/my-portfolio-site");
+// need something like "express-sanitizer"
+var url = process.env.DATABASEURL || "mongodb://localhost/blog";
+mongoose.connect(url, {useMongoClient: true});
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
@@ -30,10 +30,12 @@ app.use(flash());
 // seedDB();
 
 // Passport configuration
-app.use(require("express-session")({
+app.use(require('express-session')({
   secret: "relentless learning",
+  //avoid Using the default session cookie name can open your app to attacks
+  name: 'sessionId',
   resave: false,
-  saveUninitialized: false
+  saveUninitialized: false,
 }));
 
 // Part about Authentication
@@ -46,11 +48,10 @@ passport.deserializeUser(User.deserializeUser());
 // Pass in user ID
 app.use(function(req, res, next) {
   res.locals.blogSpecific = req.originalUrl.startsWith("/blogs");
-  // res.locals.root = req.baseUrl;
   res.locals.currentUser = req.user;
   res.locals.error = req.flash("error");
   res.locals.success = req.flash("success");
-  console.log(res.locals);
+  // console.log(res.locals);
   next();
 });
 
