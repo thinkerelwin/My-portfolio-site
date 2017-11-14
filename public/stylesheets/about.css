@@ -1,0 +1,114 @@
+body {
+  padding-top: 50px;
+  background: #8e9eab;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/*navbar*/
+navbar
+.navbar-fixed-top {
+  background-color: white;
+  border-bottom: 0;
+}
+
+.navbar-brand {
+  margin: auto;
+  padding: 2px;
+}
+
+.cssIndexBody {
+  background-color: rgb(236, 236, 236);
+}
+
+.cssSearchBar {
+  padding-bottom: 0;
+}
+
+.welcomeMessage {
+  cursor: default;
+}
+
+.input-group-btn button {
+  border-color: #ccc;
+}
+
+/*About section*/
+#about h2, 
+#about h4 {
+  text-align: center;
+}
+.container .rows {
+  margin-top: 5%;
+}
+
+.portrait {
+  border-radius: 50%;
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.4);
+}
+
+#about {
+  padding-left: 5%;
+}
+
+#about p:last-of-type {
+  margin-bottom: 3em;
+}
+
+.contactIcon {
+  text-align: right;
+}
+
+.contactIcon i {
+  margin-right: 1rem;
+}
+
+/*skills section*/
+#skills div h1 {
+  margin-top: 15%;
+}
+
+.devicon i {
+  display: inline-block;
+  margin-right: .5em;
+  font-size: 3em;
+          transition: all .5s;
+	-webkit-transition: all .5s;
+     -moz-transition: all .5s;
+}
+
+.devicon i:hover {
+  color: green;
+          transition: all .5s;
+	-webkit-transition: all .5s;
+     -moz-transition: all .5s;
+}
+
+.cssWorkFlow {
+  padding-left: 0;
+  margin-bottom: 3em;
+}
+
+.cssWorkFlow li {
+  list-style-type: none;
+  font-size: 1.3em;
+}
+
+.cssWorkFlow li i {
+  margin-right: 1.5rem;
+}
+
+#skills h1 {
+  margin-bottom: 2em;
+}
+.skillsTitle {
+  margin-top: 0;
+}
+
+#skills div h2 {
+  margin-bottom: 1em;
+}
+
+#skills div {
+  margin-bottom: 3em;
+}

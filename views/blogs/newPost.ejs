@@ -1,0 +1,29 @@
+<% include ../partials/header %>
+
+<div class="container newPostForm">
+  <form action="/blogs" method="POST">
+    <fieldset>
+      <legend>New Post</legend>
+      <div class="input-group">
+        <span class="input-group-addon">Title</span>
+        <input class="form-control" id=" title" name="blog[title]" type="text" required>
+      </div>
+      <div class="input-group">
+        <span class="input-group-addon">Image URL</span>
+        <input class="form-control" type="url" id="imgae" name="blog[image]" placeholder="https://">
+      </div>
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-tags" aria-hidden="true" title="tags"></i></span>
+        <input class="form-control" type="text" id="tag" name="blog[tag]" placeholder="tags">
+      </div>
+      <!--<div class="input-group">-->
+        <span class="input-group-addon">Content</span>
+        <textarea class="form-control" name="blog[content]" rows="15" cols="70"required></textarea>
+      <!--</div>-->
+
+    </fieldset>
+    <button class="btn btn-primary btn-block">Submit</button>
+  </form>
+</div>
+  
+<% include ../partials/footer %>

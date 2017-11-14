@@ -1,0 +1,38 @@
+<% include ../partials/header %>
+
+<div class="container-fluid cssIndexBody">
+  
+  <% if (noMatch !== "") { %>
+    <h3><%= noMatch %></h3>
+  <% } %>
+  
+  <div class="row text-center">
+    <% blogs.forEach(function(blog) { %>
+      <div class="col-md-4 col-sm-6 form-group cssPost">
+        <div class="innerMargin">
+          <a href="/blogs/<%= blog._id %>">
+            <div class="thumbnail">
+              <img src="<%= blog.image %>">
+            </div>
+            <div class="caption">
+              <h4><%= blog.title%></h4>
+              <p class="text-muted">
+                <i class="fa fa-user" aria-hidden="true"></i> <%= blog.author.username %>,
+                <i class="fa fa-clock-o" aria-hidden="true"></i> <%=blog.created.toDateString() %>
+              </p>
+              <p class="cssContent">
+                <%= blog.content.substring(0,80) %>...
+              </p>
+              <p class="cssTags">
+                <i class="fa fa-tags" aria-hidden="true"></i><%= blog.tag %>
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    <% }); %>
+  </div>
+  
+</div>
+
+<% include ../partials/footer %>

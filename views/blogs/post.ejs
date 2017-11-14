@@ -1,0 +1,54 @@
+<% include ../partials/header %>
+
+  <div class="container">
+    <article>
+      <header>
+        <h1><%= blog.title%></h1>
+      </header>
+      <section>
+        <p class="text-muted">
+          <i class="fa fa-user" aria-hidden="true"></i> <%= blog.author.username %>,
+          <i class="fa fa-clock-o" aria-hidden="true"></i> <%=blog.created.toDateString() %>
+        </p>
+        <div class="thumbnail">
+          <img src="<%= blog.image %>">
+        </div>
+        <p><%= blog.content %></p>
+        <% if (currentUser && blog.author.id.equals(currentUser._id)) {%>
+          <a class="btn btn-warning" href="/blogs/<%= blog._id %>/edit">Edit</a>
+          <form class="cssInlineBtn" action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
+            <button class="btn btn-danger">Delete</button>
+          </form>
+        <% }; %>
+      </section>
+      <footer>
+        <p class="cssTags">
+          <i class="fa fa-tags" aria-hidden="true"></i><%= blog.tag %>
+        </p>
+      </footer>
+    </article>
+    
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">Comments</h4>
+      </div>
+      <div class="panel-body">
+        <% blog.comments.forEach(function(comment) { %>
+          <p><i class="fa fa-user-o" aria-hidden="true"></i> <%= comment.author.username %></p>
+          <time class="pull-right"><%= comment.created.toDateString() %></time>
+          <aside><%= comment.opinion %></aside>
+          <% if (currentUser && comment.author.id.equals(currentUser._id)) {%>
+            <a class="btn btn-warning" href="/blogs/<%= blog._id %>/comments/<%= comment._id %>/edit">Edit</a>
+            <form class="cssInlineBtn" action="/blogs/<%= blog._id %>/comments/<%= comment._id%>?_method=DELETE" method="POST">
+              <button class="btn btn-danger">Delete</button>
+            </form>
+          <% }; %>
+          <hr>
+        <% }); %>
+          <a href="/blogs/<%= blog._id %>/comments/new" class="btn btn-info">Add Comment</a>
+      </div>
+    </div>    
+    
+  </div>
+  
+<% include ../partials/footer %>

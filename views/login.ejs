@@ -1,0 +1,21 @@
+<% include ./partials/header %>
+
+<div class="container loginForm">
+  <form action="/login" method="POST">
+    <fieldset>
+      <legend>Logged In Here</legend>
+      <div class="input-group margin-bottom-sm">
+        <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+        <!--beware, name attribute are not the same before-->
+        <input class="form-control" id="username" name="username" type="text" placeholder="Username" required> 
+      </div>
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+        <input class="form-control" id="password" name="password" type="password" placeholder="Password" required>
+      </div>
+    </fieldset>
+    <button class="btn btn-primary btn-block">Logged in</button>
+  </form>
+</div>
+
+<% include ./partials/footer %>

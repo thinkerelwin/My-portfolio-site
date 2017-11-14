@@ -1,0 +1,22 @@
+<% include ./partials/header %>
+
+<div class="container registerForm">
+  <form action="/register" method="POST">
+    <fieldset>
+      <legend>Register Now!</legend>
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+        <!--beware, name attribute are not the same before-->
+        <input class="form-control" id="username" name="username" type="text" placeholder="Username" pattern=".{5,10}" title=" only 5 to 10 characters allowed"required> 
+      </div>
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+        <input class="form-control" id="password" name="password" type="password" placeholder="Password" pattern=".{5,10}" title=" only 5 to 10 characters allowed"  required>
+      </div>
+    </fieldset>
+    <button class="btn btn-primary btn-block">Register</button>
+  </form>
+</div>
+
+<% include ./partials/footer %>
+

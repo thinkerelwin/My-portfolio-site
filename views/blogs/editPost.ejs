@@ -1,0 +1,29 @@
+<% include ../partials/header %>
+
+<div class="container editPostForm">
+  <form action="/blogs/<%= blog._id %>?_method=PUT" method="POST">
+    <fieldset>
+      <legend>Edit <%= blog.title %></legend>
+      <div class="input-group">
+        <span class="input-group-addon">Title</span>
+        <input class="form-control" name="blog[title]" type="text" value="<%= blog.title %>" required>
+      </div>
+      <div class="input-group">
+        <span class="input-group-addon">Image URL</span>
+        <input class="form-control" name="blog[image]" type="url" value="<%= blog.image %>">
+      </div>
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-tags" aria-hidden="true" title="tags"></i></span>
+        <input class="form-control" name="blog[tag]" type="text" placeholder="tags" value="<%= blog.tag %>">
+      </div>
+      <!--<div class="input-group">-->
+        <span class="input-group-addon">Content</span>
+        <textarea class="form-control" name="blog[content]" rows="15" cols="70" required><%= blog.content %></textarea>
+      <!--</div>-->
+
+    </fieldset>
+    <button class="btn btn-primary btn-block">Submit</button>
+  </form>
+</div>
+
+<% include ../partials/footer %>

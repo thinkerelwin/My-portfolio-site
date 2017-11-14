@@ -1,0 +1,16 @@
+<% include ../partials/header %>
+  
+<div class="container newCommentForm">
+  <form action="/blogs/<%= blog._id %>/comments" method="POST">
+    <fieldset>
+      <legend>Add Comment to "<%= blog.title %>"</legend>
+      <div class="input-group">
+        <span class="input-group-addon">Opinion</span>
+        <input class="form-control" id="opinion" name="comment[opinion]" type="text">
+      </div>
+      <button class="btn btn-primary">Submit</button>
+    </fieldset>
+  </form>
+</div>
+  
+<% include ../partials/footer %>
