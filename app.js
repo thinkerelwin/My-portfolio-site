@@ -20,7 +20,8 @@ var indexRoutes   = require("./routes/index"),
     
 // need something like "express-sanitizer"
 
-mongoose.connect("mongodb://localhost/blog");
+// mongoose.connect("mongodb://localhost/blog");
+mongoose.connect("mongodb://thinkerelwin:mLab0710@ds259175.mlab.com:59175/my-portfolio-site");
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
