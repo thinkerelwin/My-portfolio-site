@@ -6,7 +6,7 @@ YelpCamp is a campground review website like The-Dyrt, build by the mentor in a 
 
 Click the link near the head or <a href="https://the-voice-within.herokuapp.com/">here</a>
 
-# Programming Languages & Tools
+## Programming Languages & Tools
   <ul>
     <li>Javascript</li>
     <li>Node.js</li>
@@ -17,7 +17,7 @@ Click the link near the head or <a href="https://the-voice-within.herokuapp.com/
     <li>MongoDB</li>
   </ul>
 
-# Architecture & Functions
+## Architecture & Functions
 
 <ul>
   <li>MVC design pattern</li>
