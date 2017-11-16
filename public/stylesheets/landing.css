@@ -40,7 +40,7 @@ body {
   animation-delay: 20s; 
 }
 .slideshow li:nth-child(4) { 
-  background-image: url(https://res.cloudinary.com/myblog/image/upload/v1510280360/IMG_2352_hdnbkz.jpg); 
+  background-image: url(http://res.cloudinary.com/myblog/image/upload/c_scale,w_1019/v1510280360/IMG_2352_hdnbkz.jpg); 
   animation-delay: 30s; 
 }
 .slideshow li:nth-child(5) { 
