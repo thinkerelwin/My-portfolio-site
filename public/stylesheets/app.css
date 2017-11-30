@@ -146,14 +146,13 @@ fieldset .input-group {
   box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.5);
 }
 
-#portfolio .portfolioGrid a {
+#portfolio .portfolioGrid a > div {
           transition: all .3s;
 	-webkit-transition: all .3s;
 	   -moz-transition: all .3s;
 }
 
 /*vague other background when hover over a specific item*/
-#portfolio:hover .portfolioGrid:not(:hover) a {
+#portfolio:hover .portfolioGrid a:not(:hover) > div {
   opacity: 0.4;
 }
-
