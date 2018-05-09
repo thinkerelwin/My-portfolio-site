@@ -20,10 +20,7 @@ Visit it via the link near the head or <a href="https://the-voice-within.herokua
 ## Architecture & Functions
 
 <ul>
-  <li>MVC design pattern</li>
-  <li>RESTful Routes</li>
   <li>Authenticaiton & Authorization</li>
-  <li>Flash message</li>
-  <li>CRUD on posts and comments</li>
-  <li>Use keyword to search titles, content and tags</li>
+  <li>Form Validation</li>
+  <li>CRUD on orders, users ang groups</li>
 </ul>
