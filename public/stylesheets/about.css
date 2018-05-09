@@ -70,7 +70,7 @@ navbar
 
 .devicon i {
   display: inline-block;
-  margin-right: .5em;
+  margin: 10px;
   font-size: 3em;
           transition: all .5s;
 	-webkit-transition: all .5s;

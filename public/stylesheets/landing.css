@@ -25,7 +25,7 @@ body {
   background-repeat: no-repeat;
   opacity: 0;
   z-index: 0;
-  animation: imageAnimation 30s linear infinite; 
+  animation: imageAnimation 20s linear infinite; 
 }
 
 .slideshow li:nth-child(1) { 
@@ -33,19 +33,19 @@ body {
 }
 .slideshow li:nth-child(2) { 
   background-image: url(https://source.unsplash.com/3BK_DyRVf90);
-  animation-delay: 6s; 
+  animation-delay: 4s; 
 }
 .slideshow li:nth-child(3) { 
   background-image: url(https://source.unsplash.com/d3bYmnZ0ank);
-  animation-delay: 12s; 
+  animation-delay: 8s; 
 }
 .slideshow li:nth-child(4) { 
   background-image: url(http://res.cloudinary.com/myblog/image/upload/c_scale,w_1019/v1510280360/IMG_2352_hdnbkz.jpg); 
-  animation-delay: 18s; 
+  animation-delay: 12s; 
 }
 .slideshow li:nth-child(5) { 
-  background-image: url(https://source.unsplash.com/4QBofR-Z3BQ);
-  animation-delay: 24s; 
+  background-image: url(https://source.unsplash.com/cckf4TsHAuw);
+  animation-delay: 16s; 
 }
 
 #landing-header {

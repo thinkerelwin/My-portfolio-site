@@ -152,6 +152,10 @@ fieldset .input-group {
 	   -moz-transition: all .3s;
 }
 
+.projects-padding {
+  padding-left: 15px;
+}
+
 /*vague other background when hover over a specific item*/
 #portfolio:hover .portfolioGrid a:not(:hover) > div {
   opacity: 0.4;
